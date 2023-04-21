@@ -1,0 +1,37 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
+  transform: scale(0.75);
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(0px, 5vw, 72px);
+    margin-left: -23px;
+    img {
+      height: 230px;
+    }
+  }
+}
+
+.title {
+  color: #1e73be;
+  margin-top: 48px;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #555;
+}
+h3 {
+  color: #555;
+  margin-bottom: 48px;
+}

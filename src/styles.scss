@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/normalize.scss";
+
+body {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 30%,
+    rgb(180, 180, 190) 83%,
+    rgb(145, 145, 155) 100%
+  );
+}
