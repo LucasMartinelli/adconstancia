@@ -1,0 +1,153 @@
+<header>
+  <section class="container-wrapper superior-header">
+    <article class="container">
+      <p class="desktop">
+        <span>Assembleia de Deus</span> - Ministério do Belém &nbsp;|&nbsp;
+        Setor 8
+      </p>
+      <p class="mobile"><span>AD Belém</span> &nbsp;-&nbsp; Setor 8</p>
+      <div>
+        <button mat-icon-button aria-label="Facebook">
+          <img src="../../../../assets/imgs/facebook.svg" alt="Facebook" />
+        </button>
+        <button mat-icon-button aria-label="Instagram">
+          <img src="../../../../assets/imgs/instagram.svg" alt="Instagram" />
+        </button>
+        <button mat-icon-button aria-label="Youtube">
+          <img src="../../../../assets/imgs/youtube.svg" alt="Youtube" />
+        </button>
+      </div>
+    </article>
+  </section>
+  <section class="container-wrapper middle-header">
+    <article class="container">
+      <div class="logo-wrapper">
+        <img
+          src="../../../../assets/imgs/logo.png"
+          alt=""
+          srcset=""
+          class="logo"
+        />
+        <img
+          src="../../../../assets/imgs/setor8.png"
+          alt=""
+          srcset=""
+          class="setor"
+        />
+      </div>
+      <div class="name-wrapper">
+        <p><span> AD </span> Belém</p>
+        <h1>Vila Constância</h1>
+      </div>
+      <div class="culto-wrapper">
+        <h3>Nossos Cultos</h3>
+        <div class="culto-row">
+          <div>
+            <p class="day">Quartas-feiras</p>
+            <p class="hour">19:30h</p>
+          </div>
+          <div>
+            <p class="day">Sextas-feiras</p>
+            <p class="hour">19:30h</p>
+          </div>
+          <div>
+            <p class="day">Domingos</p>
+            <p class="hour">17:45h</p>
+          </div>
+        </div>
+      </div>
+      <button mat-icon-button aria-label="Mobile menu" class="menu-mobile">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </article>
+    <img
+      src="../../../../assets/imgs/header-bg.png"
+      alt=""
+      srcset=""
+      class="header-bg"
+    />
+  </section>
+  <mat-card>
+    <section class="container-wrapper bottom-header">
+      <nav class="container">
+        <button
+          mat-button
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </button>
+        <button
+          mat-button
+          [routerLink]="['quem-somos']"
+          routerLinkActive="active"
+        >
+          Quem Somos
+        </button>
+        <button
+          mat-button
+          routerLinkActive="active"
+          [matMenuTriggerFor]="departMenu"
+        >
+          Departamentos
+        </button>
+
+        <mat-menu #departMenu="matMenu">
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/ebd']"
+            routerLinkActive="active"
+          >
+            EBD
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/missoes']"
+            routerLinkActive="active"
+          >
+            Missões
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/infantil']"
+            routerLinkActive="active"
+          >
+            Depto. Infantil
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/adolescentes']"
+            routerLinkActive="active"
+          >
+            Adolescentes
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/mocidade']"
+            routerLinkActive="active"
+          >
+            Mocidade
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/circulo-de-oracao']"
+            routerLinkActive="active"
+          >
+            Círculo de Oração
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['/departamentos/coral']"
+            routerLinkActive="active"
+          >
+            Coral
+          </button>
+        </mat-menu>
+        <button mat-button [routerLink]="['contato']" routerLinkActive="active">
+          Contato
+        </button>
+      </nav>
+    </section>
+  </mat-card>
+</header>

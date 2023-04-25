@@ -1,9 +1,12 @@
-<section>
-  <div>
-    <img src="../assets/imgs/logo.png" alt="ADBelem" />
-    <img src="../assets/imgs/setor8.png" alt="Setor8" style="height: 200px" />
-  </div>
-  <h1 class="title">Assembleia de Deus Ministério do Belém</h1>
-  <h2 class="subtitle">Vila Constância &nbsp;|&nbsp; Setor 8</h2>
-  <h3>Site em construção.</h3>
-</section>
+<app-loader *ngIf="loaderService.isLoading | async"></app-loader>
+
+<main>
+  <app-header></app-header>
+  <section
+    class="main-content"
+    [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
+  >
+    <router-outlet #outlet="outlet"></router-outlet>
+  </section>
+  <app-footer></app-footer>
+</main>

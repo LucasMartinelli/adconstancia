@@ -1,0 +1,192 @@
+header {
+  background: radial-gradient(
+    circle,
+    rgb(255, 255, 255) 90%,
+    rgb(230, 230, 230) 100%
+  );
+}
+.superior-header {
+  .container {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px double #00000023;
+    z-index: 1;
+    background-color: #ffffff30;
+    p {
+      font-style: italic;
+      color: #555;
+      margin: 0;
+      font-size: 13px;
+      span {
+        font-weight: 600;
+      }
+    }
+
+    button {
+      width: 32px;
+      height: 32px;
+      padding: 4px !important;
+      img {
+        transition: 200ms ease all;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      ::ng-deep {
+        .mat-mdc-button-touch-target {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.middle-header {
+  .header-bg {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    opacity: 0.4;
+    width: 100%;
+    height: 178px;
+    object-fit: cover;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: clamp(8px, 2vw, 18px);
+    padding-bottom: clamp(8px, 2vw, 24px);
+    padding-left: clamp(16px, 2vw, 23px);
+    gap: clamp(14px, 2vw, 32px);
+    z-index: 1;
+    .logo-wrapper {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      .logo {
+        height: clamp(50px, 7vw, 80px);
+      }
+      .setor {
+        height: clamp(50px, 7vw, 70px);
+      }
+    }
+    .name-wrapper {
+      flex-grow: 1;
+      h1 {
+        font-family: "Bruno Ace SC", cursive;
+        color: #555;
+        font-size: clamp(21px, 3vw, 32px);
+        line-height: clamp(21px, 3vw, 32px);
+        margin: 0;
+        transform: skewX(4deg);
+      }
+      p {
+        color: white;
+        background: #555;
+        transform: skewX(-10deg);
+        display: inline-block;
+        padding: 0 clamp(5px, 2vw, 10px);
+        margin-bottom: clamp(1px, 1vw, 4px);
+        margin-left: 2px;
+        font-size: 10px;
+        line-height: clamp(15px, 2vw, 20px);
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+    .culto-wrapper {
+      text-align: center;
+      margin-right: 23px;
+
+      p,
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        color: #555;
+      }
+      h3 {
+        font-size: 16px;
+        width: 200px;
+        border-bottom: 3px solid #1e73be46;
+        margin: 0 auto;
+        padding-bottom: 0px;
+      }
+      .culto-row {
+        margin-top: 5px;
+        display: flex;
+        gap: 24px;
+        background: #ffffffbb;
+        box-shadow: 0 0 10px 5px #ffffffbb;
+        border-radius: 5px;
+        .day {
+          font-size: 12px;
+          font-weight: 500;
+        }
+        .hour {
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+mat-card {
+  border-radius: 0;
+  z-index: 2;
+  box-shadow: 3px 0 4px #00000015;
+}
+.bottom-header {
+  //border-bottom: 3px solid #1e73be;
+  .container {
+    flex-direction: row;
+    justify-content: flex-start;
+    button {
+      padding: 14px 20px;
+      height: auto;
+      font-weight: 400;
+      border-radius: 0;
+      color: #444;
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.mobile,
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .setor {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .culto-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .mobile {
+    display: inline-block;
+  }
+  .desktop {
+    display: none;
+  }
+  .menu-mobile {
+    display: block;
+  }
+  mat-card {
+    display: none;
+  }
+}

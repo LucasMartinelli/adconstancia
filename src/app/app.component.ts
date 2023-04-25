@@ -1,10 +1,23 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './core/services/loader.service';
+import { ChildrenOutletContexts } from '@angular/router';
+import { fadeAnimation } from 'src/assets/animations/page-transition';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation],
 })
 export class AppComponent {
-  title = 'adconstancia';
+  constructor(
+    private contexts: ChildrenOutletContexts,
+    public loaderService: LoaderService
+  ) {}
+
+  getRouteAnimationData() {
+    let data =
+      this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+    return data;
+  }
 }

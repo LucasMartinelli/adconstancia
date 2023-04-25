@@ -1,0 +1,77 @@
+footer {
+  background-color: #333;
+  color: #ddd;
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 16px;
+    .footer-col-1 {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-grow: 1;
+      .logo {
+        height: clamp(50px, 7vw, 80px);
+      }
+      .name-wrapper {
+        h1 {
+          font-family: "Bruno Ace SC", cursive;
+          color: #ddd;
+          font-size: clamp(21px, 3vw, 24px);
+          line-height: clamp(21px, 3vw, 24px);
+          margin: 0;
+          transform: skewX(4deg);
+        }
+        p {
+          color: #333;
+          background: #ddd;
+          transform: skewX(-10deg);
+          display: inline-block;
+          padding: 0 clamp(5px, 2vw, 10px);
+          margin-bottom: 0;
+          margin-left: 2px;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: clamp(15px, 2vw, 18px);
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .footer-col-2 {
+      p {
+        margin: 0;
+        text-align: right;
+        color: #ddd;
+      }
+    }
+  }
+}
+.second-footer {
+  background-color: #232323;
+  .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    p {
+      font-size: 12px;
+      font-weight: 300;
+      margin: 0;
+      text-align: center;
+      color: #ddd;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column !important;
+    align-items: center;
+    .footer-col-2 p {
+      text-align: center !important;
+    }
+  }
+}
