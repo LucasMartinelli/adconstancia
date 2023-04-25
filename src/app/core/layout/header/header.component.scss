@@ -62,7 +62,8 @@ header {
     padding-top: clamp(8px, 2vw, 18px);
     padding-bottom: clamp(8px, 2vw, 24px);
     padding-left: clamp(16px, 2vw, 23px);
-    gap: clamp(14px, 2vw, 32px);
+    padding-right: clamp(14px, 2vw, 23px);
+    gap: clamp(10px, 2vw, 32px);
     z-index: 1;
     .logo-wrapper {
       display: flex;
