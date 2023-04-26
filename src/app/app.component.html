@@ -1,7 +1,10 @@
 <app-loader *ngIf="loaderService.isLoading | async"></app-loader>
-
+<app-mobile-menu
+  (closeMenu)="mobileMenuHandler($event)"
+  [mobileMenuOpen]="showMobileMenu"
+></app-mobile-menu>
 <main>
-  <app-header></app-header>
+  <app-header (openMenu)="mobileMenuHandler($event)"></app-header>
   <section
     class="main-content"
     [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"

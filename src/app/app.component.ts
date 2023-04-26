@@ -10,6 +10,8 @@ import { fadeAnimation } from 'src/assets/animations/page-transition';
   animations: [fadeAnimation],
 })
 export class AppComponent {
+  showMobileMenu = false;
+
   constructor(
     private contexts: ChildrenOutletContexts,
     public loaderService: LoaderService
@@ -19,5 +21,10 @@ export class AppComponent {
     let data =
       this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
     return data;
+  }
+
+  mobileMenuHandler($event: boolean) {
+    console.log($event);
+    this.showMobileMenu = $event;
   }
 }

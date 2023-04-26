@@ -1,0 +1,113 @@
+.overlay {
+  position: fixed;
+  background: #00000070;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+  transition: 300ms opacity ease;
+  transition-delay: 50ms;
+}
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+  overflow: hidden;
+  box-shadow: none;
+  transition: 300ms all ease;
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 270px;
+  height: 100vh;
+  background: white;
+  box-shadow: 2px 0 10px #00000077;
+
+  .logo {
+    height: 70px;
+    margin: 0 auto;
+    margin-top: -23px;
+  }
+
+  .mainNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #ddd;
+    margin-top: 42px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    button {
+      background-color: white;
+      border-radius: 0;
+      height: 48px;
+      &.active {
+        font-weight: 600;
+      }
+      mat-icon {
+        position: absolute;
+        right: 10px;
+        color: #444;
+        transition: 200ms ease all;
+      }
+    }
+    .departNav {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: #ddd;
+      padding: 1px 0;
+      animation: subMenuAnim 200ms ease both;
+      button {
+        background-color: #fafafa;
+        border-radius: 0;
+        color: #555;
+        font-size: 13px;
+        height: 36px;
+      }
+    }
+  }
+}
+
+.opened {
+  transform: translateX(280px);
+  box-shadow: 0 0 23px rgba(0, 0, 0, 0.23);
+}
+
+.openedBg {
+  z-index: 10;
+  opacity: 1;
+}
+
+.chevron {
+  transform: rotate(180deg);
+}
+
+.logoAnim {
+  animation: fadeInLogoMobile 700ms ease both;
+}
+
+@keyframes subMenuAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes fadeInLogoMobile {
+  from {
+    opacity: 0;
+    transform: translateY(-7%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

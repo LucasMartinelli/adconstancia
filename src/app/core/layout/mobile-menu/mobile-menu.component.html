@@ -1,0 +1,114 @@
+<section
+  class="overlay"
+  [ngClass]="{ openedBg: mobileMenuOpen }"
+  (click)="dispatchCloseMenu(showDepts)"
+></section>
+
+<article class="mobileMenu" [ngClass]="{ opened: mobileMenuOpen }">
+  <button
+    mat-icon-button
+    (click)="dispatchCloseMenu(showDepts)"
+    style="margin-left: auto"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+  <img
+    src="../../../../assets/imgs/logo.png"
+    alt=""
+    srcset=""
+    class="logo"
+    [ngClass]="{ logoAnim: mobileMenuOpen }"
+  />
+  <nav class="mainNav">
+    <button
+      mat-button
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="dispatchCloseMenu()"
+    >
+      Home
+    </button>
+    <button
+      mat-button
+      [routerLink]="['quem-somos']"
+      routerLinkActive="active"
+      (click)="dispatchCloseMenu()"
+    >
+      Quem Somos
+    </button>
+    <button mat-button routerLinkActive="active" (click)="deptsToggle()">
+      Departamentos
+      <mat-icon
+        fontIcon="expand_more"
+        [ngClass]="{ chevron: showDepts }"
+      ></mat-icon>
+    </button>
+    <nav class="departNav" *ngIf="showDepts">
+      <button
+        mat-button
+        [routerLink]="['/departamentos/ebd']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        EBD
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/missoes']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Missões
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/infantil']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Depto. Infantil
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/adolescentes']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Adolescentes
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/mocidade']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Mocidade
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/circulo-de-oracao']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Círculo de Oração
+      </button>
+      <button
+        mat-button
+        [routerLink]="['/departamentos/coral']"
+        routerLinkActive="active"
+        (click)="dispatchCloseMenu(true)"
+      >
+        Coral
+      </button>
+    </nav>
+    <button
+      mat-button
+      [routerLink]="['contato']"
+      routerLinkActive="active"
+      (click)="dispatchCloseMenu()"
+    >
+      Contato
+    </button>
+  </nav>
+</article>

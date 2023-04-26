@@ -6,22 +6,34 @@
         Setor 8
       </p>
       <p class="mobile"><span>AD Belém</span> &nbsp;-&nbsp; Setor 8</p>
-      <div>
-        <button mat-icon-button aria-label="Facebook">
-          <img src="../../../../assets/imgs/facebook.svg" alt="Facebook" />
-        </button>
-        <button mat-icon-button aria-label="Instagram">
-          <img src="../../../../assets/imgs/instagram.svg" alt="Instagram" />
-        </button>
-        <button mat-icon-button aria-label="Youtube">
-          <img src="../../../../assets/imgs/youtube.svg" alt="Youtube" />
-        </button>
+      <div class="social-wrapper">
+        <a
+          href="https://www.facebook.com/profile.php?id=100082490196821"
+          target="_blank"
+        >
+          <button mat-icon-button aria-label="Facebook">
+            <img src="../../../../assets/imgs/facebook.svg" alt="Facebook" />
+          </button>
+        </a>
+        <a
+          href="https://www.instagram.com/igreja_vila_contancia/"
+          target="_blank"
+        >
+          <button mat-icon-button aria-label="Instagram">
+            <img src="../../../../assets/imgs/instagram.svg" alt="Instagram" />
+          </button>
+        </a>
+        <a href="https://www.youtube.com/@ieadconstancia" target="_blank">
+          <button mat-icon-button aria-label="Youtube">
+            <img src="../../../../assets/imgs/youtube.svg" alt="Youtube" />
+          </button>
+        </a>
       </div>
     </article>
   </section>
   <section class="container-wrapper middle-header">
     <article class="container">
-      <div class="logo-wrapper">
+      <div class="logo-wrapper" [routerLink]="['/']">
         <img
           src="../../../../assets/imgs/logo.png"
           alt=""
@@ -35,7 +47,7 @@
           class="setor"
         />
       </div>
-      <div class="name-wrapper">
+      <div class="name-wrapper" [routerLink]="['/']">
         <p><span> AD </span> Belém</p>
         <h1>Vila Constância</h1>
       </div>
@@ -56,7 +68,12 @@
           </div>
         </div>
       </div>
-      <button mat-icon-button aria-label="Mobile menu" class="menu-mobile">
+      <button
+        mat-icon-button
+        aria-label="Mobile menu"
+        class="menu-mobile"
+        (click)="dispatchOpenMenu()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
     </article>
@@ -93,7 +110,7 @@
           Departamentos
         </button>
 
-        <mat-menu #departMenu="matMenu">
+        <mat-menu #departMenu="matMenu" class="departMenu">
           <button
             mat-menu-item
             [routerLink]="['/departamentos/ebd']"

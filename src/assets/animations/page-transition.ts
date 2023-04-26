@@ -17,6 +17,7 @@ export const fadeAnimation = trigger('fadeAnimation', [
           opacity: 0,
           position: 'absolute',
           width: '100%',
+          height: '-webkit-fill-available',
         }),
       ],
       {
@@ -33,6 +34,7 @@ export const fadeAnimation = trigger('fadeAnimation', [
             opacity: 0,
             position: 'absolute',
             width: '100%',
+            height: '-webkit-fill-available',
           })
         ),
       ],

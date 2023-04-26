@@ -4,23 +4,23 @@ footer {
   .container {
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: clamp(14px, 3vw, 20px);
+    padding-bottom: clamp(14px, 3vw, 20px);
     gap: 16px;
     .footer-col-1 {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: clamp(7px, 2vw, 16px);
       flex-grow: 1;
       .logo {
-        height: clamp(50px, 7vw, 80px);
+        height: clamp(42px, 7vw, 70px);
       }
       .name-wrapper {
         h1 {
           font-family: "Bruno Ace SC", cursive;
           color: #ddd;
-          font-size: clamp(21px, 3vw, 24px);
-          line-height: clamp(21px, 3vw, 24px);
+          font-size: clamp(18px, 3vw, 24px);
+          line-height: clamp(18px, 3vw, 24px);
           margin: 0;
           transform: skewX(4deg);
         }
@@ -42,10 +42,20 @@ footer {
       }
     }
     .footer-col-2 {
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(12px, 3vw, 14px);
+        line-height: clamp(16px, 4vw, 22px);
+        margin-bottom: 2px;
+        text-align: right;
+        font-weight: 600;
+      }
       p {
         margin: 0;
         text-align: right;
         color: #ddd;
+        font-size: clamp(11px, 3vw, 12px);
+        line-height: clamp(16px, 3vw, 20px);
       }
     }
   }
@@ -55,13 +65,17 @@ footer {
   .container {
     padding-top: 12px;
     padding-bottom: 12px;
+    display: flex;
+    justify-content: center;
     p {
-      font-size: 12px;
       font-weight: 300;
-      margin: 0;
+      font-size: clamp(11px, 3vw, 12px);
+      line-height: clamp(16px, 3vw, 20px);
       text-align: center;
       color: #ddd;
       opacity: 0.8;
+      margin: 0 clamp(40px, 15vw, 80px);
+      min-width: 230px;
     }
   }
 }
@@ -70,8 +84,11 @@ footer {
   .container {
     flex-direction: column !important;
     align-items: center;
-    .footer-col-2 p {
-      text-align: center !important;
+    .footer-col-2 {
+      p,
+      h3 {
+        text-align: center !important;
+      }
     }
   }
 }

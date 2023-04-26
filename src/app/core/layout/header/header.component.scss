@@ -7,27 +7,33 @@ header {
 }
 .superior-header {
   .container {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: clamp(0px, 1vw, 2px);
+    padding-bottom: clamp(0px, 1vw, 2px);
+    padding-left: clamp(18px, 2vw, 23px);
+    padding-right: clamp(18px, 2vw, 23px);
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 3px double #00000023;
+
     z-index: 1;
     background-color: #ffffff30;
     p {
       font-style: italic;
       color: #555;
       margin: 0;
-      font-size: 13px;
+      font-size: clamp(11px, 2vw, 13px);
       span {
         font-weight: 600;
       }
     }
-
+    .social-wrapper {
+      display: flex;
+      gap: calc((clamp(0px, 1vw, 8px) - 8px) * -1);
+    }
     button {
-      width: 32px;
-      height: 32px;
-      padding: 4px !important;
+      width: clamp(24px, 3vw, 32px);
+      height: clamp(24px, 3vw, 32px);
+      padding: calc(clamp(0px, 0.5vw, 7px) - 3px) !important;
       img {
         transition: 200ms ease all;
       }
@@ -38,8 +44,8 @@ header {
       }
       ::ng-deep {
         .mat-mdc-button-touch-target {
-          width: 32px;
-          height: 32px;
+          width: clamp(24px, 3vw, 32px);
+          height: clamp(24px, 3vw, 32px);
         }
       }
     }
@@ -61,28 +67,30 @@ header {
     justify-content: flex-start;
     padding-top: clamp(8px, 2vw, 18px);
     padding-bottom: clamp(8px, 2vw, 24px);
-    padding-left: clamp(16px, 2vw, 23px);
-    padding-right: clamp(14px, 2vw, 23px);
-    gap: clamp(10px, 2vw, 32px);
+    padding-left: clamp(14px, 2vw, 23px);
+    padding-right: clamp(12px, 2vw, 23px);
+    gap: clamp(7px, 2vw, 32px);
     z-index: 1;
     .logo-wrapper {
       display: flex;
       align-items: flex-end;
       gap: 16px;
+      cursor: pointer;
       .logo {
-        height: clamp(50px, 7vw, 80px);
+        height: clamp(42px, 7vw, 80px);
       }
       .setor {
-        height: clamp(50px, 7vw, 70px);
+        height: clamp(42px, 7vw, 70px);
       }
     }
     .name-wrapper {
+      cursor: pointer;
       flex-grow: 1;
       h1 {
         font-family: "Bruno Ace SC", cursive;
         color: #555;
-        font-size: clamp(21px, 3vw, 32px);
-        line-height: clamp(21px, 3vw, 32px);
+        font-size: clamp(18px, 3vw, 32px);
+        line-height: clamp(18px, 3vw, 32px);
         margin: 0;
         transform: skewX(4deg);
       }
