@@ -1,5 +1,6 @@
 @import "./assets/styles/normalize.scss";
 @import "./assets/styles/theme.scss";
+@import "bootstrap/scss/bootstrap";
 
 // GENERAL -----------------
 * {
@@ -72,6 +73,7 @@ mat-menu button {
 }
 
 .container-wrapper {
+  animation: fadeEnter 500ms ease both;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,5 +117,12 @@ mat-menu button {
   }
 }
 
-/* Importing Bootstrap SCSS file. */
-@import "bootstrap/scss/bootstrap";
+@keyframes fadeEnter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

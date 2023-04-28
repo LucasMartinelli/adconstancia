@@ -1,9 +1,8 @@
 .picsum-img-wrapper {
   img {
-    width: 100%;
     max-width: 1400px;
+    height: clamp(180px, 40vw, 400px);
 
-    min-height: 180px;
     object-fit: cover;
     animation: backgroundEnter 5000ms ease both;
   }

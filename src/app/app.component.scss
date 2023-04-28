@@ -2,6 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  animation: fadeEnter 500ms ease both;
 }
 
 .main-content {

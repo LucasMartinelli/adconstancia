@@ -1,4 +1,5 @@
 .hero {
+  animation: none !important;
   min-height: clamp(130px, 20vw, 230px);
   background-color: #114472;
   background-image: url("../../../../assets/imgs/hero-bg.png");
@@ -31,7 +32,7 @@
       font-size: clamp(24px, 4vw, 42px);
       color: #def;
       text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.7);
-      letter-spacing: 7px;
+      letter-spacing: clamp(3px, 1vw, 7px);
       animation: titleEnter 1s ease both;
       animation-delay: 0.5s;
     }
