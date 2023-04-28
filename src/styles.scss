@@ -28,7 +28,9 @@ a {
 .departMenu .mat-mdc-menu-content {
   min-width: 180px;
 }
-
+.carousel-indicators {
+  margin-bottom: clamp(2px, 2vw, 16px) !important;
+}
 .construction {
   font-size: 18px;
   font-weight: 500;

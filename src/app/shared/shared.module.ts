@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './modules/material.module';
 import { LoaderComponent } from './components/loader/loader.component';
-import { HeroComponent } from './components/loader/hero/hero.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   imports: [
