@@ -7,11 +7,8 @@
 
 <main>
   <app-header (openMenu)="mobileMenuHandler($event)"></app-header>
-  <section
-    class="main-content"
-    [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
-  >
-    <router-outlet #outlet="outlet"></router-outlet>
+  <section class="main-content">
+    <router-outlet></router-outlet>
   </section>
   <app-footer></app-footer>
 </main>

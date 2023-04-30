@@ -7,3 +7,24 @@
 .carousel-wrapper {
   height: clamp(180px, 40vw, 400px);
 }
+
+.sobre,
+.departamentos,
+.maps {
+  min-height: clamp(230px, 40vw, 650px);
+}
+
+.contribua {
+  min-height: clamp(230px, 40vw, 300px);
+}
+
+.horarios {
+  background: url("../../../../assets/imgs/horarios.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #1e73be;
+  background-blend-mode: soft-light;
+  min-height: clamp(230px, 40vw, 300px);
+}

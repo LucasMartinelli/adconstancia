@@ -1,20 +1,22 @@
 <ngb-carousel *ngIf="images">
-  <!-- <ng-template ngbSlide>
-    <div class="picsum-img-wrapper slide-ensino">
-      <img [src]="images[0]" alt="Random second slide" />
-    </div>
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </ng-template> -->
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper slide-ceia">
       <div class="slide-overlay">&nbsp;</div>
-      <img [src]="images[1]" alt="Ceia do Senhor" />
+      <img [src]="images[0]" alt="Ceia do Senhor" />
     </div>
     <div class="carousel-caption slide-ceia-text">
       <h3>QUARTO DOMINGO DO MÊS - 17:45H</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper slide-ensino">
+      <div class="slide-overlay">&nbsp;</div>
+      <img [src]="images[1]" alt="Culto de Ensino" />
+    </div>
+    <div class="carousel-caption slide-ensino-text">
+      <h3 class="line1">CULTO DE</h3>
+      <h3 class="line2">ENSINO</h3>
+      <p>TODAS AS QUARTAS-FEIRAS - 19:30H</p>
     </div>
   </ng-template>
 </ngb-carousel>

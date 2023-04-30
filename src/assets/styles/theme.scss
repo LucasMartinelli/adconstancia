@@ -1,7 +1,7 @@
 @use "@angular/material" as mat;
 
-$my-primary: mat.define-palette(mat.$pink-palette, 500); // e63888
-$my-accent: mat.define-palette(mat.$indigo-palette, A400); // 2073CF
+$my-primary: mat.define-palette(mat.$light-blue-palette, 800); // 1E73BE
+$my-accent: mat.define-palette(mat.$amber-palette, 400); // 2073CF
 
 $my-typography: mat.define-typography-config(
   $body-1:

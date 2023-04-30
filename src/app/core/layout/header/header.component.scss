@@ -7,6 +7,8 @@ header {
   );
 }
 .superior-header {
+  z-index: 2;
+  position: relative;
   .container {
     padding-top: clamp(0px, 1vw, 2px);
     padding-bottom: clamp(0px, 1vw, 2px);
@@ -161,6 +163,7 @@ mat-card {
   .container {
     flex-direction: row;
     justify-content: flex-start;
+    padding: 0 23px;
     button {
       animation: fadeEnter 700ms ease both;
       animation-delay: 300ms;

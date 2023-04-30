@@ -2,6 +2,122 @@
 
 <section class="container-wrapper">
   <article class="container">
-    <p>contact-page works!</p>
+    <h3>Fale Conosco:</h3>
+    <article class="content-row">
+      <article>
+        <form [formGroup]="contactForm">
+          <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="nome"
+              autofocus
+              aria-label="Nome"
+            />
+            <mat-error *ngIf="contactForm.hasError('required', 'nome')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="email"
+              aria-label="E-mail"
+            />
+            <mat-error *ngIf="contactForm.hasError('required', 'email')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Telefone</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="telefone"
+              mask="(00) 00000-0000"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Assunto</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="assunto"
+              aria-label="Assunto"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Mensagem</mat-label>
+            <textarea rows="8" matInput formControlName="mensagem"></textarea>
+            <mat-error *ngIf="contactForm.hasError('required', 'mensagem')">
+              Campo obrigatório
+            </mat-error>
+          </mat-form-field>
+          <button
+            mat-flat-button
+            color="primary"
+            [disabled]="contactForm.invalid"
+            type="submit"
+            (click)="sendContact()"
+          >
+            Enviar
+          </button>
+          <div class="success-alert" *ngIf="showAlert">
+            <p>Agradecemos por sua mensagem!</p>
+          </div>
+        </form>
+      </article>
+      <article class="contactInfo">
+        <div>
+          <h4>Telefone</h4>
+          <p>Em breve.</p>
+        </div>
+        <div>
+          <h4>E-mail</h4>
+          <p>contato@adbelemconstancia.com.br</p>
+        </div>
+        <div>
+          <h4>Endereço</h4>
+          <p>R. Tomás Teixeira, 443</p>
+          <p>Vila Constância, São Paulo - SP</p>
+          <p>CEP: 04658-020</p>
+        </div>
+        <div>
+          <h4>Siga-nos nas redes sociais</h4>
+          <div class="social-wrapper">
+            <a
+              href="https://www.facebook.com/profile.php?id=100082490196821"
+              target="_blank"
+            >
+              <button mat-icon-button aria-label="Facebook">
+                <img
+                  src="../../../../assets/imgs/facebook.svg"
+                  alt="Facebook"
+                />
+              </button>
+            </a>
+            <a
+              href="https://www.instagram.com/igreja_vila_contancia/"
+              target="_blank"
+            >
+              <button mat-icon-button aria-label="Instagram">
+                <img
+                  src="../../../../assets/imgs/instagram.svg"
+                  alt="Instagram"
+                />
+              </button>
+            </a>
+            <a href="https://www.youtube.com/@ieadconstancia" target="_blank">
+              <button mat-icon-button aria-label="Youtube">
+                <img src="../../../../assets/imgs/youtube.svg" alt="Youtube" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+    </article>
   </article>
 </section>
