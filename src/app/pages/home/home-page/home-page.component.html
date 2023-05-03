@@ -2,11 +2,115 @@
   <app-carousel></app-carousel>
 </div>
 <div class="container-wrapper sobre">
-  <section class="container">Quem Somos e culto online</section>
+  <section class="container">
+    <h3>Conheça Nossa Igreja</h3>
+    <article class="content-row">
+      <article style="flex-basis: 63%">
+        <h4>Mensagem da Semana</h4>
+        <iframe
+          src="https://www.youtube.com/embed?listType=playlist&list=UUeN9tJ5yX-NxHe3yhMmNUYA"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <h4>Assista nossas pregações</h4>
+
+        <p>
+          Com a visão de Ser uma igreja missionária, fiel a Deus, à Bíblia e
+          comprometida com a evangelização de pessoas nós criamos um canal no
+          Youtube para facilitar o acesso às pregações da igreja.
+        </p>
+        <a href="https://www.youtube.com/@ieadconstancia" target="_blank">
+          <button mat-flat-button color="primary">
+            Nosso Canal no Youtube
+          </button>
+        </a>
+      </article>
+      <article class="quem-somos">
+        <h4>Sobre nós</h4>
+        <p>
+          Somos uma igreja evangélica pentecostal, ardente de amor a Deus e aos
+          irmãos. Centrada em Cristo e em sua Palavra, profundamente envolvida
+          em evangelismo e em missões: proclamamos o Evangelho de Jesus Cristo
+          até que Ele venha.
+        </p>
+        <p>
+          A congregação Vila Constância pertence ao Ministério Belém, Setor 8.
+        </p>
+        <p>
+          Estamos localizados na Rua Tomás Teixeira, nº 443. Nos reunimos todos
+          os domingos a partir das 17:45h.
+        </p>
+        <img src="../../../../assets/imgs/quem-somos.jpg" alt="Igreja" />
+
+        <button mat-flat-button color="primary" routerLink="quem-somos">
+          Saiba Mais
+        </button>
+      </article>
+    </article>
+  </section>
 </div>
 
 <div class="container-wrapper horarios">
-  <section class="container">Horarios</section>
+  <section class="container">
+    <article class="content-row">
+      <article style="flex-basis: 45%">
+        <div>
+          <h3>Horários dos Cultos</h3>
+          <h4>Venha adorar a Deus conosco!</h4>
+        </div>
+      </article>
+      <article style="flex-basis: 55%">
+        <ul class="desktop">
+          <li>
+            <span>Circulo de Oração</span> - Terças-feiras, às
+            <span>9:00h</span>
+          </li>
+          <li>
+            <span>Culto de Ensino</span> - Quartas-feiras, às
+            <span>19:30h</span>
+          </li>
+          <li>
+            <span>Culto dos Departamentos</span> - Sextas-feiras, às
+            <span>19:30h</span>
+          </li>
+          <li>
+            <span>Escola Dominical</span> - Domingos, às <span>8:30h</span>
+          </li>
+          <li><span>Culto Público</span> - Domingos, às <span>17:45h</span></li>
+          <li>
+            <span>Ceia do Senhor</span> - 4º Domingo do mês, às
+            <span>17:45h</span>
+          </li>
+        </ul>
+        <ul class="mobile">
+          <li>
+            <span>Circulo de Oração:</span><br />Terças-feiras, às
+            <span>9:00h</span>
+          </li>
+          <li>
+            <span>Culto de Ensino</span><br />Quartas-feiras, às
+            <span>19:30h</span>
+          </li>
+          <li>
+            <span>Culto dos Departamentos</span><br />Sextas-feiras, às
+            <span>19:30h</span>
+          </li>
+          <li>
+            <span>Escola Dominical</span><br />Domingos, às <span>8:30h</span>
+          </li>
+          <li>
+            <span>Culto Público</span><br />Domingos, às <span>17:45h</span>
+          </li>
+          <li>
+            <span>Ceia do Senhor</span><br />4º Domingo do mês, às
+            <span>17:45h</span>
+          </li>
+        </ul>
+      </article>
+    </article>
+  </section>
 </div>
 
 <div class="container-wrapper departamentos">
@@ -17,6 +121,6 @@
   <section class="container">Contribua</section>
 </div>
 
-<div class="container-wrapper maps" id="map">
+<div class="container-wrapper maps" #map>
   <section class="container">Maps</section>
 </div>

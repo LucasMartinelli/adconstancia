@@ -95,21 +95,26 @@
       font-size: clamp(3rem, 12vw, 8rem);
       line-height: clamp(3rem, 12vw, 8rem);
       opacity: 0.8;
-      margin-bottom: clamp(14px, 3vw, 42px);
+      margin-bottom: clamp(14px, 3vw, 38px);
       animation: textEnterSlide2h3line2 5000ms ease both;
       animation-delay: 1800ms;
     }
   }
   p {
+    display: inline-block;
     text-transform: uppercase;
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
+    letter-spacing: 1px;
     margin: 0;
     margin-bottom: clamp(14px, 2.3vw, 28px);
-    font-size: clamp(11px, 2.3vw, 28px);
+    font-size: clamp(10px, 2vw, 28px);
     line-height: clamp(24px, 3vw, 32px);
-    color: #794400;
+    padding: clamp(3px, 1vw, 7px) clamp(12px, 2vw, 23px);
+    background-color: #663a00;
+    border-radius: 4px;
+    color: white;
     opacity: 0.9;
     animation: textEnter2 5000ms ease both;
     animation-delay: 2000ms;

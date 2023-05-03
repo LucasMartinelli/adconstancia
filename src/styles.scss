@@ -26,9 +26,19 @@ body {
 a {
   text-decoration: none;
 }
+.content-row button.mdc-button--unelevated {
+  display: flex;
+  padding: 24px 42px !important;
+}
 .carousel-inner {
   box-shadow: 0 90px 42px -100px #00000050 !important;
 }
+@media (max-width: 520px) {
+  .carousel-inner {
+    box-shadow: 0 64px 23px -70px rgba(0, 0, 0, 0.19) !important;
+  }
+}
+
 .departMenu .mat-mdc-menu-content {
   min-width: 180px;
 }
@@ -89,38 +99,47 @@ mat-menu button {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    padding: clamp(24px, 3vw, 42px) clamp(21px, 3vw, 32px);
+    padding: clamp(24px, 6vw, 72px) clamp(21px, 3vw, 32px);
+    padding-bottom: clamp(24px, 7vw, 84px);
 
     .content-row {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: space-between;
       gap: clamp(32px, 7vw, 200px);
       width: 100%;
       article {
-        flex-grow: 1;
-        min-width: 260px;
+        flex-basis: 50%;
       }
     }
 
     h3 {
       font-family: "Montserrat", sans-serif;
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: clamp(21px, 3vw, 28px);
       letter-spacing: 3px;
-      margin-bottom: clamp(16px, 3vw, 32px);
+      margin-bottom: clamp(16px, 5vw, 56px);
       font-weight: 600;
-      color: #555;
+      color: #686868;
       line-height: clamp(24px, 3vw, 32px);
     }
     h4 {
       font-family: "Montserrat", sans-serif;
       font-size: clamp(15px, 2vw, 18px);
-      line-height: clamp(21px, 3vw, 24px);
+      line-height: clamp(21px, 3vw, 32px);
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: clamp(16px, 3vw, 32px);
       color: #1e73be;
     }
+    p {
+      line-height: 22px;
+    }
+    // h4::after {
+    //   display: block;
+    //   content: "";
+    //   margin-top: 10px;
+    //   border-bottom: 1px solid #1e73be;
+    // }
 
     table {
       width: 100%;

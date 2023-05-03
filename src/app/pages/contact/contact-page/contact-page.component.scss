@@ -71,8 +71,9 @@
     flex-direction: column !important;
     .contactInfo {
       text-align: center;
-      box-shadow: none;
+      box-shadow: 0 -23px 25px -30px #00000030;
       padding-left: 0;
+      padding-top: 21px;
       h4 {
         margin-top: 23px;
       }
