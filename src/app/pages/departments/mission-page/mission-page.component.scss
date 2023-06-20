@@ -3,3 +3,41 @@
   flex-direction: column;
   flex-grow: 1;
 }
+
+.content-row {
+  margin: 32px 0 clamp(24px, 6vw, 72px) 0;
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h4 {
+      margin-bottom: 16px;
+    }
+    p {
+      text-indent: 4rem;
+    }
+  }
+  img {
+    width: 550px;
+    max-width: 75vw;
+    margin: 0 auto;
+    aspect-ratio: initial;
+  }
+}
+
+.full-img {
+  margin: clamp(21px, 3vw, 32px) auto;
+  width: 85vw;
+  margin-bottom: 48px;
+  max-width: 1130px;
+  height: 45vw;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: 0 23%;
+}
+
+@media (max-width: 985px) {
+  .content-row {
+    flex-direction: column-reverse !important;
+  }
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DepartmentsPageComponent } from './departments-page/departments-page.component';
 import { EbdPageComponent } from './ebd-page/ebd-page.component';
 import { MissionPageComponent } from './mission-page/mission-page.component';
 import { PageRoutes } from 'src/app/shared/enums/page-routes.enum';
@@ -9,12 +8,9 @@ import { WomenPageComponent } from './women-page/women-page.component';
 import { YoungPageComponent } from './young-page/young-page.component';
 import { TeenagersPageComponent } from './teenagers-page/teenagers-page.component';
 import { ChildrenPageComponent } from './children-page/children-page.component';
+import { OrchestraPageComponent } from './orchestra-page/orchestra-page.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: DepartmentsPageComponent,
-  },
   {
     path: PageRoutes.EBD,
     component: EbdPageComponent,
@@ -42,6 +38,10 @@ const routes: Routes = [
   {
     path: PageRoutes.CORAL,
     component: ChoralPageComponent,
+  },
+  {
+    path: PageRoutes.ORQUESTRA,
+    component: OrchestraPageComponent,
   },
 ];
 

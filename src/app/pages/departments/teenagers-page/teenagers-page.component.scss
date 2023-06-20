@@ -3,3 +3,44 @@
   flex-direction: column;
   flex-grow: 1;
 }
+
+.versiculo {
+  text-align: center;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: clamp(21px, 3vw, 32px);
+  color: #555;
+  font-weight: 500;
+  margin: 8px 0 16px 0;
+  cite {
+    color: #777;
+    line-height: clamp(21px, 3vw, 32px);
+  }
+}
+
+.content-row {
+  margin: 32px 0 clamp(24px, 6vw, 32px) 0;
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h4 {
+      margin-bottom: 16px;
+    }
+    p {
+      text-indent: 4rem;
+    }
+  }
+  img {
+    width: 400px;
+    transform: rotate(-2deg);
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+}
+
+.full-img {
+  margin: clamp(21px, 3vw, 32px) auto;
+  width: 75vw;
+  margin-bottom: 48px;
+  max-width: 900px;
+}

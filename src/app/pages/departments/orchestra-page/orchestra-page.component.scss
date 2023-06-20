@@ -18,21 +18,21 @@
     }
   }
   img {
-    width: 400px;
-    transform: rotate(-2deg);
+    width: 450px;
     max-width: 75vw;
     margin: 0 auto;
+    aspect-ratio: initial;
   }
 }
 
 .full-img {
-  transform: rotate(0.7deg);
   margin: clamp(21px, 3vw, 32px) auto;
-  max-width: 85vw;
-  margin-bottom: 32px;
+  width: 85vw;
+  margin-bottom: 48px;
+  max-width: 1130px;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 985px) {
   .content-row {
     flex-direction: column-reverse !important;
   }

@@ -3,3 +3,16 @@
   flex-direction: column;
   flex-grow: 1;
 }
+
+.versiculo {
+  text-align: center;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: clamp(21px, 3vw, 32px);
+  color: #555;
+  font-weight: 500;
+  margin: 8px 0 16px 0;
+  cite {
+    color: #777;
+    line-height: clamp(21px, 3vw, 32px);
+  }
+}

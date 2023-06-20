@@ -53,6 +53,25 @@ a {
 }
 // LAYOUT -----------------
 
+.photo {
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px #00000023;
+  border: 7px solid white;
+}
+
+.versiculo {
+  text-align: center;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: clamp(21px, 3vw, 32px);
+  color: #555;
+  font-weight: 500;
+  margin: 8px 0 16px 0;
+  cite {
+    color: #777;
+    line-height: clamp(21px, 3vw, 32px);
+  }
+}
+
 mat-menu button {
   font-family: "Montserrat", sans-serif !important;
 }
@@ -106,6 +125,7 @@ mat-menu button {
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
+      align-items: center;
       gap: clamp(32px, 7vw, 200px);
       width: 100%;
       article {
@@ -116,11 +136,11 @@ mat-menu button {
     h3 {
       font-family: "Montserrat", sans-serif;
       font-size: clamp(21px, 3vw, 28px);
-      letter-spacing: 3px;
+      letter-spacing: clamp(1px, 1vw, 3px);
       margin-bottom: clamp(16px, 5vw, 56px);
       font-weight: 600;
       color: #686868;
-      line-height: clamp(24px, 3vw, 32px);
+      line-height: clamp(28px, 3vw, 32px);
     }
     h4 {
       font-family: "Montserrat", sans-serif;

@@ -11,4 +11,5 @@ export enum PageRoutes {
   MOCIDADE = 'mocidade',
   CIRCULO_ORACAO = 'circulo-de-oracao',
   CORAL = 'coral',
+  ORQUESTRA = 'orquestra',
 }
